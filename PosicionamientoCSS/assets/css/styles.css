@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.caja {
+    /* Unidades absolutas */
+    /* Unidades relativas */
+    width: 100%;/* Viewport */
+    /* width: 100vw;Esta medida incluye el scroll */
+    height: 1200px;
+    background-color: royalblue;
+    border: solid 5px;
+    font-size: 10px;
+}
+
+.caja-imagen {
+    margin: 20px auto;
+    width: 50%;/* La imagen toma un tamño relativo a su elemento padre */
+    height: 70%;
+    display: block;
+}
+
+.button {
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: lightslategrey;
+    display: block;
+    text-decoration: none;
+    color: azure;
+    text-align: center;
+    border-radius: 30px;
+    /* font-size: .5rem;  1 rem equivale a 16px */
+    font-size: 1.2em;
+    font-family: 'Arial';
+}
+
+.btn-primary {
+    /* position: static;Valor por defecto del posicionamiento */
+    position: relative;/* Permite cambiar posicionamiento tomando como referencia su posición original*/
+}
+
+.btn-secondary {
+    /* position: fixed;Permite fijar un elemento en la posición que se indique */
+    position: sticky;/* Combina el posicionamiento relativo y fixed */
+    bottom: 50px;
+}
+
+.btn-tertiary {
+    /* position: fixed;Permite fijar un elemento en la posición que se indique */
+    position: sticky;/* Combina el posicionamiento relativo y fixed */
+    bottom: 50px;
+}
+
