@@ -39,17 +39,26 @@
 .btn-primary {
     /* position: static;Valor por defecto del posicionamiento */
     position: relative;/* Permite cambiar posicionamiento tomando como referencia su posición original*/
+    top: 50px;
+    right: 50px;
+    bottom: 2px;
+    left: 2px;
+    z-index: 100;
+    /* El z-index trabaja con el eje z o profundidad */
 }
 
 .btn-secondary {
     /* position: fixed;Permite fijar un elemento en la posición que se indique */
     position: sticky;/* Combina el posicionamiento relativo y fixed */
     bottom: 50px;
+    background-color: brown;
+    z-index: 10;
 }
 
 .btn-tertiary {
     /* position: fixed;Permite fijar un elemento en la posición que se indique */
-    position: sticky;/* Combina el posicionamiento relativo y fixed */
+    position: absolute;
     bottom: 50px;
+    right: 100px;
 }
 
