@@ -9,19 +9,37 @@ body {
 }
 
 .contenedor-flex {
-    width: 90%;
-    max-width: 800px;
-    min-height: 300px;
+    width: 700px; 
+    max-width: 1000px;
+    max-height: 1000px;
+    height: 500px;
     margin: 50px auto;
-    outline: 3px solid #000;
+    outline: 3px solid #000;/* Sirve para agregar un borde sin ser propiedad del modelo de caja */
     background-color: #fff;
     padding: 20px;
+    display: flex;
+    /* flex-direction: column; */
+    /* flex-direction: row;Permite cambiar el eje principal */
+    /* flex-direction: column; */ 
+    /* flex-wrap: nowrap;No va a "envolver" */
+    flex-wrap: wrap;
+    /* justify-content: center;Permite alinear los ítems de manera horizontal */
+    /* justify-content: space-between; Distribuye el espacio entre elementos */
+    /* justify-content: space-around;Distribuye el espacio entre y a los lados de los elementos */
+    justify-content: space-evenly;/* Distribuye el espacio entre y  a los lados de los elementos de manera equitativa*/
+    align-items: center;
+    /* align-items: flex-end; Permite alinear los elementos al final de acuerdo al eje secundario o cross axis */
+    /* align-items: flex-start; Permite alinear los elementos al inicio de acuerdo al cross axis */
+    /* flex-flow: column wrap; Es una manera de abreviar el flex-direction y flex-wrap */
+
 }
 
 
 .elemento {
     text-align: center;
-    width: 150px; 
+    width: 100px;
+    height: 80px; 
+    margin: 10px 10px;
     padding: 10px;
     border-radius: 10px;
     background-color: #fff;
@@ -29,14 +47,14 @@ body {
 }
 
 .pokemon-img {
-    width: 80px;
+    width: 50%;
     height: auto;
     display: block;
     margin: 0 auto 10px; 
 }
 
 .nombre-pokemon {
-    font-size: 1.2rem;
+    font-size: .8rem;
     color: #333;
     font-weight: bold;
     margin: 0;
@@ -45,10 +63,13 @@ body {
 
 .elemento1 {
     background-color: #78c850; 
+    /* flex-grow: 1; Fel grow indica como el elemento se va a agrandar */
+    
 }
 
 .elemento2 {
     background-color: #6890f0; 
+    /* flex-shrink: 5; Esta propiedad indica cómo el elemento se va a encoger */
 }
 
 .elemento3 {

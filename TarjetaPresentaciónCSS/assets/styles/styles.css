@@ -1,0 +1,127 @@
+/*
+Crea una carpeta llamada assets en la raíz del proyecto.
+Dentro de la carpeta assets, crea otra carpeta llamada styles.
+En la carpeta styles, crea un archivo llamado styles.css.
+Asegúrate de que el archivo HTML esté correctamente vinculado al archivo CSS.
+Agrega el código para asegurar que todos los elementos tengan un comportamiento consistente en cuanto a márgenes, padding y tamaño. 
+En el body agrega los estilos para centrar la tarjeta en la pantalla y aplica un fondo gris claro.
+A la clase .tarjeta agrega los estilos para definir tamaño, color de fondo, bordes redondeados y sombra de la tarjeta.
+A la clase .imagen-perfil agrega los estilos para ajustar el tamaño de la imagen, la hace circular y le añade un borde.
+A la clase .nombre agrega los estilos para definir el tamaño y color del nombre, y añade un margen inferior.
+A la clase .descripcion agrega los estilos para ajustar el tamaño, color y espaciado del texto de la descripción.
+A la clase .boton-contacto agrega los estilos para definir el estilo del botón, incluyendo color, tamaño, bordes redondeados y una transición suave.
+Adicional: Agrega el estilo para que el botón tenga un estado hover , es decir, que cambie su color de fondo cuando el usuario pase el cursor sobre él y que también cambie el estilo del puntero o pointer.
+*/
+
+
+/*ingresamos el padding y la caja*/
+*{
+    padding: 0;
+    margin: 0; 
+    box-sizing: border-box;
+ }
+ 
+ /*Insertamos estilos*/
+ body{
+     background-color: lightgray;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-family: Arial, Helvetica, sans-serif;
+ }
+ /*Le dimos estilo, tamaño y color a la tarjeta*/
+ .tarjeta{
+     height: 300px;
+     width: 300px;
+     border: solid;
+     border-radius: 10px;
+     background-color: antiquewhite;
+     text-align: center;
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+ 
+ }
+ /*Centramos imagen, tabaño y estilo*/
+ .imagen-perfil{
+     margin: 0 auto;
+     border: 3px solid;
+     border-radius: 150px;
+     width: 100px;
+     height: 100px;
+     display: flex;
+     justify-content: center;
+     object-fit: cover;
+ }
+ 
+ /*Cambiamos tabaño del nombre, dimos margen y color*/
+ .nombre{
+     font-size: 25px;
+     color: cornflowerblue;
+     margin-bottom: 15px;
+ }
+ 
+ /*Estilo de la descripción*/
+ .descripcion{
+     font-size: 15px;
+     color:darkgreen;
+     line-height: 1.5;
+     letter-spacing: 1.0px;
+ }
+ /*Estilo del boton de contacto, centrando, dando tamaño y color*/
+ .boton-contacto{
+     margin: 10px auto;
+     height: 30px;
+     width: 100px;
+     background-color: chocolate;
+     color:aliceblue;
+     /* padding: 10px; */
+     align-items: center;
+     border: none;
+     border-radius: 10px;
+     transition: background-color 0.5s ease;
+     display: inline-block;
+ }
+  /*Agregamos el cursor arriba del boton y el cambio de color*/
+ .boton-contacto:hover{
+     background-color: blue;
+     cursor: pointer; 
+ }
+
+
+ @media (max-width: 480px) {
+    .tarjeta {
+        background-color: aliceblue;
+        height: 40%;
+        width: 80%;
+    }
+
+    .imagen-perfil {
+        height: 30%;
+        width: 35%;
+    }    
+
+    .nombre {
+        font-size: 2em;
+    }
+ }
+
+ @media (min-width: 780px) {
+    .tarjeta {
+        background-color: rgb(176, 130, 219);
+        width: 60%;
+        height: 60%;
+    }
+
+    .imagen-perfil {
+        height: 40%;
+        width: 50%;
+    }    
+
+    .nombre {
+        font-size: 3em;
+    }
+
+ }

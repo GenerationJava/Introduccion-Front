@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+.hero {
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-grid {
+    width: 600;
+    height: 60vh;
+    outline: solid 2px #000;
+    display: grid;/* Display grid genera una rejilla */
+    grid-template-columns: repeat(6, 100px);
+    grid-template-rows: repeat(6, 100px);
+}
+
+.imagen {
+    width: 100px;
+    height: 100px;
+}
+
+.imagen1 {
+    background-image: url('../img/playa1.jpg');
+    background-size: cover;
+}
+
+.imagen2 {
+    background-image: url('../img/playa2.jpg');
+    background-size: cover;
+}
+.imagen3 {
+    background-image: url('../img/playa3.jpg');
+    background-size: cover;
+}
+.imagen4 {
+    background-image: url('../img/playa4.jpg');
+    background-size: cover;
+}
+.imagen5 {
+    background-image: url('../img/playa5.jpg');
+    background-size: cover;
+}
+.imagen6 {
+    background-image: url('../img/playa6.jpg');
+    background-size: cover;
+}
