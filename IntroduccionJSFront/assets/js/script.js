@@ -125,6 +125,142 @@ console.log(generarBoleta("Martin", nombreProducto, function(nombre, producto) {
 }
 ));
 
+//Función para generar el descuento
+function aplicarDescuento(precio, cantidad, funcionDescuento) {
+    return funcionDescuento(precio, cantidad);
+}
+
+let nuevoPrecio = aplicarDescuento(1000, 10, function(precio, cantidad) {
+    const porcentaje = 0.9;
+    return (precio * cantidad) * porcentaje;
+}) 
+
+console.log("El nuevo precio con el descuento es de ", nuevoPrecio);
+
+//Funciones flecha(Arrow function) =>
+let precioFinal = (nuevoPrecio, iva) => nuevoPrecio + (nuevoPrecio * iva);
+
+console.log("El precio final de su compra con el IVA es de ", precioFinal(nuevoPrecio, iva));
+
+/*** ESTRUCTURAS ***/
+let productos = ["Celular", "Computador", "Auriculares"];
+console.log(productos);
+/*Agregar elementos en un arreglo
+productos.push("Cargador");
+console.log(productos);
+productos.push(10);
+console.log(productos);
+productos.push(true);
+console.log(productos);*/
+/*Remover elementos al final
+productos.pop();
+console.log(productos);*/
+/*Agregar al principio y remover al principio
+productos.shift();
+console.log(productos);
+productos.unshift("Router");
+console.log(productos);
+
+for (let i = 0; i < productos.length; i++) {
+    console.log("El nombre del producto en esta posición es ", productos[i]);
+}*/
+
+//Recorrer el arreglo con map() para generar un nuevo arreglo a partir del primero y haciendo cambios en los datos
+let productosEnMayuscula = productos.map(producto => producto.toUpperCase());
+console.log(productosEnMayuscula);
+
+//Recorrer el arreglo con filter() para filtrar según un criterio y almacenar en un nuevo arreglo
+let productosFiltrados = productos.filter(producto => producto.includes("e"));
+console.log(productosFiltrados);
+
+//Crear variable que guarde un producto seleccionado por nombre
+// function buscarProducto(productos, producto) {
+//      //Bucle para ir iterando por la lista y comparando los nombres de los productos
+//  }
+let productoSeleccionado = productos.find(producto => producto === "Auriculares");
+console.log(productoSeleccionado);
+
+//Método reduce() sirve para acumular valores en un arreglo
+// let totalesCarrito = [1000, 5000, 500];
+// let totalCarrito = totalesCarrito.reduce((acumulador, precio) => acumulador + precio, 0);
+// console.log("El total de todos lo ítems es ", totalCarrito);
+
+// let numeros = [10, 100, 1000, 10000];
+// let sumaNumeros = numeros.reduce((resultado, numero) => resultado + numero, 10);
+// console.log(sumaNumeros);
+
+/*** OBJETOS ***/
+let cliente = {
+    //Atributos 
+    nombre: "Juan Pérez",
+    edad: 30,
+    esClienteFrecuente: true,
+    metodoPago: "Tarjeta"
+}
+
+console.log("El nombre del cliente es ", cliente.nombre);
+
+let tienda = {
+    //Atributo
+    nombre: "Tech Store",
+    //Métodos
+    mostrarNombre: function() {
+        return this.nombre;
+    },
+    calcularTotalConIva: (precio) => precio * 1.19
+}
+
+console.log("El precio con IVA sería de ", tienda.calcularTotalConIva(1000));
+
+/*** JSON ***/
+//(Javascript Object Notation) = estándar de comunicación
+//Convertir un objeto JS en un string JSON, método stringify()
+let datosCliente = JSON.stringify(cliente);
+console.log(datosCliente);
+//Convertir una cadena JSON a código JS, método parse()
+let objetoCliente = JSON.parse(datosCliente);
+console.log(objetoCliente);
+
+// let pokemon = {
+//     //Atributos
+//     elemento: "Agua",
+//     nombre: "Squirtle",
+//     //Métodos
+//     atacar: function(puntosVida, puntosAtaque) {
+//         return puntosVida - puntosAtaque;
+//     }
+// }
+
+//Template literals, permiten tomar valores de manera dinámica, funcionan con "bacticks"
+cliente.nombre = "Martin";
+let perfilCliente = `Su nombre de cliente es ${cliente.nombre} ha comprado con ${cliente.metodoPago}`;
+console.log(perfilCliente);
+
+//Spread operador, permite expandir la cantidad de elementos de un arreglo sin modificar el original
+let categorias = ["Electrónica", "Moda", "Hogar"];
+let categoriasNuevas = [...categorias, "Salud", "Cosmeticos", "Deporte"];
+console.log(categoriasNuevas);
+
+//Acá el operador se usa en el contexto de la función 
+function mostrarCategorias(...categorias) {
+    console.log("Estas son las categorías existentes ", categorias);
+}
+mostrarCategorias("Entretenimiento", "Jardin", "Cocina");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
