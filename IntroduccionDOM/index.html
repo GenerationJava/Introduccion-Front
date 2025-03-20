@@ -13,10 +13,10 @@
 
         <p id="descripcion">Bienvenido a nuestra tienda en línea.</p>
 
-        <div class="producto">
+        <div class="producto producto1">
             <h2>Producto 1</h2>
             <p>Descripción del producto 1.</p>
-            <button class="boton">Comprar</button>
+            <button onclick="alert('Has comprado el smartphone')" class="boton">Comprar</button>
         </div>
         <div class="producto">
             <h2>Producto 2</h2>
@@ -30,12 +30,18 @@
         </div>
 
         <form id="formulario-contacto">
-            <input class="nombre" type="text" placeholder="Nombre" required>
-            <input class="email" type="email" placeholder="Correo electrónico" required>
+            <input id="nombre" for="nombre" type="text" placeholder="Nombre" required>
+            <input id="email" for="email" type="email" placeholder="Correo electrónico" required>
+            <select name="productos" id="seleccion-productos">
+                <option value="">Selecciona un producto</option>
+                <option value="producto1">Producto 1</option>
+                <option value="producto2">Producto 2</option>
+                <option value="producto3">Producto 3</option>
+
+            </select>
             <button class="form-button" type="submit">Enviar</button>
-            
         </form>
     </div>
-
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
